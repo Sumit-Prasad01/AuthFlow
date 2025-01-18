@@ -5,7 +5,7 @@ import bcryptjs from "bcryptjs";
 
 connect();
 
-export async function post(request: NextRequest) {
+export async function POST(request: NextRequest) {
   try {
     const reqBody = await request.json();
     const { username, email, password } = reqBody;
@@ -36,3 +36,7 @@ export async function post(request: NextRequest) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
+
+
+
+
