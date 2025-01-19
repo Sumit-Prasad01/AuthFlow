@@ -44,7 +44,7 @@ export default function LoginPage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <h1 className="p-4 font-bold text-2xl">{loading ? "Processing" : "Logging"}</h1>
+      <h1 className="p-4 font-bold text-2xl">{loading ? "Processing" : "Login"}</h1>
       <label htmlFor="email">Email</label>
       <input
         className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none
