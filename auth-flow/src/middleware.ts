@@ -5,7 +5,7 @@ export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname
 
   // Define which paths are public (accessible without authentication)
-  const isPublicPath = path === '/login' || path === '/signup' || path === '/verifyemail'
+  const isPublicPath = path === ''
 
   // Retrieve the token from cookies (authentication token)
   const token = request.cookies.get('token')?.value || ''
@@ -33,6 +33,6 @@ export const config = {
     '/profile',     // Profile page (requires authentication)
     '/login',       // Login page (public)
     '/signup',      // Signup page (public)
-    '/verifyemail', // Email verification page (public)
+    // '/verifyemail', // Email verification page (public)
   ]
 }
