@@ -45,49 +45,6 @@ export default function SignupPage() {
   }, [user]);
 
   return (
-    // <div className="flex flex-col items-center justify-center min-h-screen py-2">
-    //   <h1>{loading ? "Processing" : "Signup"}</h1>
-    //   <label htmlFor="username">Username</label>
-    //   <input
-    //     className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none
-    //   focus:border-gray-600 text-black"
-    //     id="username"
-    //     type="text"
-    //     value={user.username}
-    //     onChange={(e) => setUser({ ...user, username: e.target.value })}
-    //     placeholder="username"
-    //   />
-    //   <label htmlFor="email">Email</label>
-    //   <input
-    //     className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none
-    //   focus:border-gray-600 text-black"
-    //     id="email"
-    //     type="text"
-    //     value={user.email}
-    //     onChange={(e) => setUser({ ...user, email: e.target.value })}
-    //     placeholder="email"
-    //   />
-    //   <label htmlFor="password">Password</label>
-    //   <input
-    //     className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none
-    //   focus:border-gray-600 text-black"
-    //     id="password"
-    //     type="password"
-    //     value={user.password}
-    //     onChange={(e) => setUser({ ...user, password: e.target.value })}
-    //     placeholder="password"
-    //   />
-    //   <button
-    //     onClick={onSignup}
-    //     className="p-2 bg-white border border-gray-300 rounded-lg mb-4 focus:outline-nonefocus:border-gray-600 text-blue-700 font-bold"
-    //   >
-    //     {buttonDisabled ? "Can't Signup" : "Signup"}
-    //   </button>
-    //   <Link href="/login">Already Signed Up visit login page.</Link>
-    // </div>
-
-
-
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-400 to-blue-500 py-8 px-4">
   <h1 className="text-4xl font-extrabold text-white mb-6 drop-shadow-lg">
     {loading ? "Processing..." : "Signup"}
