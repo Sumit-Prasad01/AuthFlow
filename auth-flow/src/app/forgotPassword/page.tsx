@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import axios,{ AxiosError} from "axios";
+import axios, { AxiosError } from "axios";
 import toast from "react-hot-toast";
 
 export default function ForgotPasswordPage() {
@@ -13,7 +13,7 @@ export default function ForgotPasswordPage() {
     e.preventDefault();
     setMessage("");
     setError("");
-   
+
     try {
       const response = await axios.post("/api/users/forgotpassword", { email });
       setMessage(response.data.message);
@@ -30,26 +30,31 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <h1 className="text-4xl mb-4">Forgot Password</h1>
-      <form className="flex flex-col space-y-4 w-80" onSubmit={handleForgotPassword}>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-100 to-blue-300 py-8 px-4">
+      <h1 className="text-4xl font-semibold text-gray-800 mb-6">
+        Forgot Password
+      </h1>
+      <form
+        className="flex flex-col space-y-6 w-full max-w-md p-8 bg-white rounded-xl shadow-lg"
+        onSubmit={handleForgotPassword}
+      >
         <input
           type="email"
           placeholder="Enter your email"
-          className="p-2 border border-gray-800 rounded text-black"
+          className="p-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <button
           type="submit"
-          className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          className="p-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-200 transform hover:scale-105"
         >
           Submit
         </button>
       </form>
-      {message && <p className="text-green-500 mt-4">{message}</p>}
-      {error && <p className="text-red-500 mt-4">{error}</p>}
+      {message && <p className="text-green-500 mt-4 text-lg">{message}</p>}
+      {error && <p className="text-red-500 mt-4 text-lg">{error}</p>}
     </div>
   );
 }
